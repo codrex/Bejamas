@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import { useSiteMetadata } from '../lib/hooks';
+import NavBar from './NavBar';
 
 function Layout(props) {
   const {
@@ -29,7 +30,12 @@ function Layout(props) {
             src='https://identity.netlify.com/v1/netlify-identity-widget.js'
             type='text/javascript'
           ></script>
+          <link
+            href='https://fonts.googleapis.com/css?family=Montserrat&display=swap'
+            rel='stylesheet'
+          ></link>
         </Helmet>
+        <NavBar />
         <main>{props.children}</main>
       </div>
       <Helmet>
