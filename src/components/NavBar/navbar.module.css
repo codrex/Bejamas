@@ -52,3 +52,9 @@
 .link.active::after {
   opacity: 1;
 }
+
+.img {
+  width: 45px;
+  height: 41px;
+  padding: 0 30px;
+}
