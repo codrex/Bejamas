@@ -12,4 +12,4 @@ export function AboutPageTemplate({}) {
 
 AboutPageTemplate.propTypes = {};
 
-export default AboutPage = WithLayout(AboutPageTemplate);
+export default WithLayout(AboutPageTemplate);

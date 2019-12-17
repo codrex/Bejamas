@@ -12,4 +12,4 @@ export function ProductsPageTemplate({}) {
 
 ProductsPageTemplate.propTypes = {};
 
-export default ProductsPage = WithLayout(ProductsPageTemplate);
+export default WithLayout(ProductsPageTemplate);
