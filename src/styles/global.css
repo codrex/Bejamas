@@ -19,4 +19,6 @@ body,
   --black: #0000001d;
   --white: #ffffff;
   --nav-height: 60px;
+  --nav-z-index: 900;
+  --side-nav-z-index: 899;
 }
