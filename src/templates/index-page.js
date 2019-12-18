@@ -12,4 +12,4 @@ export function IndexPageTemplate({}) {
 
 IndexPageTemplate.propTypes = {};
 
-export default WithLayout(IndexPageTemplate);
+export const IndexPage = WithLayout(IndexPageTemplate);

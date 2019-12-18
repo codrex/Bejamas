@@ -1,1 +1,2 @@
-export { default } from '../../templates/about-page';
+import { AboutPage } from '../../templates/about-page';
+export default AboutPage;

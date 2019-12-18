@@ -2,7 +2,7 @@ import React from 'react';
 
 import { WithLayout } from '../components';
 
-export function ProductsPageTemplate({}) {
+function ProductsPageTemplate({}) {
   return (
     <>
       <h1>Products Page</h1>
@@ -12,4 +12,4 @@ export function ProductsPageTemplate({}) {
 
 ProductsPageTemplate.propTypes = {};
 
-export default WithLayout(ProductsPageTemplate);
+export const ProductsPage = WithLayout(ProductsPageTemplate);
