@@ -1,15 +1,15 @@
 import React from 'react';
 
-import WithLayout from '../components/WithLayout';
+import { WithLayout, HeroSection } from '../components';
 
 export function IndexPageTemplate({}) {
   return (
     <>
-      <h1>Index Page</h1>
+      <HeroSection />
     </>
   );
 }
 
 IndexPageTemplate.propTypes = {};
 
-export default IndexPage = WithLayout(IndexPageTemplate);
+export default WithLayout(IndexPageTemplate);

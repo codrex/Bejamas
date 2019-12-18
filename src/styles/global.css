@@ -1,0 +1,22 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+.main {
+  padding: 0 75px;
+}
+
+:root {
+  --text-color: #394e5d;
+  --primary-color: #4285bc;
+  --black: #0000001d;
+  --white: #ffffff;
+  --nav-height: 60px;
+}

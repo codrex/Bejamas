@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WithLayout from '../components/WithLayout';
+import { WithLayout } from '../components';
 
 export function AboutPageTemplate({}) {
   return (
@@ -12,4 +12,4 @@ export function AboutPageTemplate({}) {
 
 AboutPageTemplate.propTypes = {};
 
-export default AboutPage = WithLayout(AboutPageTemplate);
+export default WithLayout(AboutPageTemplate);

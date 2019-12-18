@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WithLayout from '../components/WithLayout';
+import { WithLayout } from '../components';
 
 export function BlogPostTemplate({}) {
   return (
@@ -12,4 +12,4 @@ export function BlogPostTemplate({}) {
 
 BlogPostTemplate.propTypes = {};
 
-export default BlogPost = WithLayout(BlogPostTemplate);
+export default WithLayout(BlogPostTemplate);

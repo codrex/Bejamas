@@ -1,6 +1,7 @@
 import React from 'react';
+import { Layout } from './Layout';
 
-function WithLayout(Template, layoutProps = {}) {
+export function WithLayout(Template, layoutProps = {}) {
   return props => {
     return (
       <Layout {...layoutProps}>
@@ -9,5 +10,3 @@ function WithLayout(Template, layoutProps = {}) {
     );
   };
 }
-
-export default WithLayout;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WithLayout from '../components/WithLayout';
+import { WithLayout } from '../components';
 
 export function ContactPageTemplate({}) {
   return (
@@ -12,4 +12,4 @@ export function ContactPageTemplate({}) {
 
 ContactPageTemplate.propTypes = {};
 
-export default ContactPage = WithLayout(ContactPageTemplate);
+export default WithLayout(ContactPageTemplate);
