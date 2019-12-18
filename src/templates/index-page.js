@@ -1,9 +1,13 @@
 import React from 'react';
 
-import WithLayout from '../components/WithLayout';
+import { WithLayout, HeroSection } from '../components';
 
 export function IndexPageTemplate({}) {
-  return <h1>Index Page</h1>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }
 
 IndexPageTemplate.propTypes = {};

@@ -1,0 +1,38 @@
+.hero {
+  height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  padding-right: 100px;
+}
+
+.headings > h1 {
+  text-align: left;
+  font-weight: 600;
+  font-size: 46px;
+  letter-spacing: 0;
+  color: #182333;
+
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+.headings > p {
+  text-align: left;
+  font-size: 22px;
+  letter-spacing: 0;
+  color: #333333;
+  opacity: 1;
+  max-width: 545px;
+  margin: 0;
+}
+
+.img {
+  width: 262px;
+}

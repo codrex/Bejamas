@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import { useSiteMetadata } from '../lib/hooks';
-import NavBar from './NavBar';
+import { NavBar } from './NavBar';
 
-function Layout(props) {
+export function Layout(props) {
   const {
     title: defaultTitle,
     description: defaultDescription
@@ -14,30 +14,28 @@ function Layout(props) {
 
   return (
     <>
-      <div>
-        <Helmet>
-          <html lang='en' />
-          <title>{title}</title>
-          <meta name='description' content={description} />
+      <Helmet>
+        <html lang='en' />
+        <title>{title}</title>
+        <meta name='description' content={description} />
 
-          <meta name='theme-color' content='#fff' />
+        <meta name='theme-color' content='#fff' />
 
-          <meta property='og:type' content='business.business' />
-          <meta property='og:title' content={title} />
-          <meta property='og:url' content='/' />
+        <meta property='og:type' content='business.business' />
+        <meta property='og:title' content={title} />
+        <meta property='og:url' content='/' />
 
-          <script
-            src='https://identity.netlify.com/v1/netlify-identity-widget.js'
-            type='text/javascript'
-          ></script>
-          <link
-            href='https://fonts.googleapis.com/css?family=Montserrat&display=swap'
-            rel='stylesheet'
-          ></link>
-        </Helmet>
-        <NavBar />
-        <main>{props.children}</main>
-      </div>
+        <script
+          src='https://identity.netlify.com/v1/netlify-identity-widget.js'
+          type='text/javascript'
+        ></script>
+        <link
+          href='https://fonts.googleapis.com/css?family=Montserrat&display=swap'
+          rel='stylesheet'
+        ></link>
+      </Helmet>
+      <NavBar />
+      <main className='main'>{props.children}</main>
       <Helmet>
         <script type='text/javascript'>
           {`
@@ -56,5 +54,3 @@ function Layout(props) {
     </>
   );
 }
-
-export default Layout;

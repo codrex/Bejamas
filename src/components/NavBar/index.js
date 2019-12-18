@@ -11,7 +11,7 @@ const links = [
   { to: '/contact', text: 'contact', order: 4 }
 ];
 
-function NavBar() {
+export function NavBar() {
   return (
     <nav className={styles.nav}>
       <ul className={styles.ul}>
@@ -31,5 +31,3 @@ function NavBar() {
     </nav>
   );
 }
-
-export default NavBar;

@@ -1,6 +1,6 @@
 .nav {
   width: 100vw;
-  height: 60px;
+  height: var(--nav-height);
   background-color: var(--white);
   box-shadow: 0px 2px 12px var(--black);
 }
