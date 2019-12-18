@@ -15,7 +15,7 @@ export function HeroSection({}) {
         </p>
       </div>
       <div className={styles.img}>
-        <Img fluid={imgFluid} />
+        <Img fixed={imgFluid} />
       </div>
     </div>
   );

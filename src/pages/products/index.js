@@ -1,1 +1,2 @@
-export { default } from '../../templates/products-page';
+import { ProductsPage } from '../../templates/products-page';
+export default ProductsPage;

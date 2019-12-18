@@ -10,8 +10,8 @@ export function useHeroImage() {
             hero {
               image {
                 childImageSharp {
-                  fluid(fit: CONTAIN) {
-                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                  fixed(fit: CONTAIN, width: 262) {
+                    ...GatsbyImageSharpFixed_withWebp
                   }
                 }
               }
@@ -23,7 +23,7 @@ export function useHeroImage() {
   );
   return get(
     data,
-    'markdownRemark.frontmatter.hero.image.childImageSharp.fluid',
+    'markdownRemark.frontmatter.hero.image.childImageSharp.fixed',
     {}
   );
 }

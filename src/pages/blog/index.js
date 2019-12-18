@@ -1,1 +1,2 @@
-export { default } from '../../templates/blog-post';
+import { BlogPost } from '../../templates/blog-post';
+export default BlogPost;

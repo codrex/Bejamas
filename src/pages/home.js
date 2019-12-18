@@ -1,1 +1,2 @@
-export { default } from '../templates/index-page';
+import { IndexPage } from '../templates/index-page';
+export default IndexPage;

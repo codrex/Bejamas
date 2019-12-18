@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Recrut Be',
-    description:
-      'simple business website using Gatsby and NetlifyCMS',
+    description: 'simple business website using Gatsby and NetlifyCMS'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -11,22 +10,22 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/uploads`,
-        name: 'uploads',
-      },
+        name: 'uploads'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: 'pages'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/assets/img`,
-        name: 'images',
-      },
+        name: 'images'
+      }
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -37,8 +36,8 @@ module.exports = {
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
-              name: 'uploads',
-            },
+              name: 'uploads'
+            }
           },
           {
             resolve: 'gatsby-remark-images',
@@ -46,24 +45,25 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 2048,
-            },
+              maxWidth: 2048
+            }
           },
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: 'static',
-            },
-          },
-        ],
-      },
+              destinationDir: 'static'
+            }
+          }
+        ]
+      }
     },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
-  ],
-}
+    `gatsby-plugin-portal`
+  ]
+};

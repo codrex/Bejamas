@@ -1,15 +1,27 @@
 .hero {
   height: calc(100vh - var(--nav-height));
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(262px, 1fr));
+  grid-template-columns: 1fr 262px;
+  grid-column-gap: 30px;
+
   flex-wrap: wrap;
+
   justify-content: center;
   align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 747px) {
+  .hero {
+    grid-template-columns: repeat(auto-fill, minmax(262px, 1fr));
+  }
 }
 
 .headings {
   display: flex;
   flex-direction: column;
-  padding-right: 100px;
 }
 
 .headings > h1 {
@@ -34,5 +46,7 @@
 }
 
 .img {
-  width: 262px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }

@@ -12,4 +12,4 @@ export function BlogPostTemplate({}) {
 
 BlogPostTemplate.propTypes = {};
 
-export default WithLayout(BlogPostTemplate);
+export const BlogPost = WithLayout(BlogPostTemplate);
