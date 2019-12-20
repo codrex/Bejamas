@@ -30,9 +30,9 @@ export function Layout(props) {
           type='text/javascript'
         ></script>
         <link
-          href='https://fonts.googleapis.com/css?family=Montserrat&display=swap'
+          href='https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'
           rel='stylesheet'
-        ></link>
+        />
       </Helmet>
       <NavBar />
       <main className='main'>{props.children}</main>

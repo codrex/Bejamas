@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { WithLayout, HeroSection } from '../components';
+import { WithLayout, HeroSection, IntroSection } from '../components';
 
 export function IndexPageTemplate({}) {
   return (
     <>
       <HeroSection />
+      <IntroSection />
     </>
   );
 }
