@@ -74,4 +74,8 @@
   .description p {
     font-size: 16px;
   }
+
+  .intro {
+    min-height: fit-content;
+  }
 }
