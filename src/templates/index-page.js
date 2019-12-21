@@ -26,6 +26,7 @@ export function IndexPageTemplate({}) {
   const isMobile = useMediaQuery({ query: '(max-width: 697px)' });
   const blogs = getBlogListData(isMobile ? blogData.slice(0, 2) : blogData);
 
+  const blogs = getBlogListData(blogData);
   return (
     <>
       <HeroSection img={heroImage} {...heroData} />
