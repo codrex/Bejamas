@@ -7,6 +7,8 @@ export function useBlogData(limit = 4) {
       {
         allMarkdownRemark(
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          sort: { fields: frontmatter___date, order: DESC }
+          limit: 4
         ) {
           nodes {
             frontmatter {
