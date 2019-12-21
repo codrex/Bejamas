@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import { useSiteMetadata } from '../lib/hooks';
 import { NavBar } from './NavBar';
+import { Footer } from './Footer';
 
 export function Layout(props) {
   const {
@@ -30,12 +31,13 @@ export function Layout(props) {
           type='text/javascript'
         ></script>
         <link
-          href='https://fonts.googleapis.com/css?family=Montserrat&display=swap'
+          href='https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'
           rel='stylesheet'
-        ></link>
+        />
       </Helmet>
       <NavBar />
       <main className='main'>{props.children}</main>
+      <Footer />
       <script
         dangerouslySetInnerHTML={{
           __html: `
