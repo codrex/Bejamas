@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import {
   WithLayout,
@@ -22,7 +23,9 @@ export function IndexPageTemplate({}) {
   const introImage = useIntroImage();
   const introData = useIntroData();
   const blogData = useBlogData();
-  const blogs = getBlogListData(blogData);
+  const isMobile = useMediaQuery({ query: '(max-width: 697px)' });
+  const blogs = getBlogListData(isMobile ? blogData.slice(0, 2) : blogData);
+
   return (
     <>
       <HeroSection img={heroImage} {...heroData} />
