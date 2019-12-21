@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 
 import styles from './blogSection.module.css';
+import { Button } from '../Button';
 // import { useHeroImage } from '../../lib/hooks';
 
 const blogs = [
@@ -44,11 +45,16 @@ function Blog({ image, title, excerpt }) {
 export function BlogSection({}) {
   //   const imgFluid = useHeroImage();
   return (
-    <div className={styles.blogs}>
-      {blogs.map((blog, index) => {
-        return <Blog key={index} {...blog} />;
-      })}
-    </div>
+    <>
+      <div className={styles.blogs}>
+        {blogs.map((blog, index) => {
+          return <Blog key={index} {...blog} />;
+        })}
+      </div>
+      <div className={styles.btnWrapper}>
+        <Button>Read more</Button>
+      </div>
+    </>
   );
 }
 
