@@ -1,40 +1,15 @@
 import React from 'react';
+import { arrayOf, shape, string, objectOf } from 'prop-types';
+import Img from 'gatsby-image';
 
 import styles from './blogSection.module.css';
 import { Button } from '../Button';
-// import { useHeroImage } from '../../lib/hooks';
 
-const blogs = [
-  {
-    image:
-      'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg',
-    title: 'Blog Title #1',
-    excerpt: 'Blog excerpt - first lines - for approx two lines'
-  },
-  {
-    image:
-      'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg',
-    title: 'Blog Title #1',
-    excerpt: 'Blog excerpt - first lines - for approx two lines'
-  },
-  {
-    image:
-      'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg',
-    title: 'Blog Title #1',
-    excerpt: 'Blog excerpt - first lines - for approx two lines'
-  },
-  {
-    image:
-      'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg',
-    title: 'Blog Title #1',
-    excerpt: 'Blog excerpt - first lines - for approx two lines'
-  }
-];
 function Blog({ image, title, excerpt }) {
   return (
     <div className={styles.blog}>
       <div className={styles.blogImg}>
-        <img src={image}></img>
+        <Img fluid={image} />
       </div>
       <div className={styles.blogContent}>
         <h3 className={styles.blogTitle}>{title}</h3>
@@ -43,8 +18,8 @@ function Blog({ image, title, excerpt }) {
     </div>
   );
 }
-export function BlogSection({}) {
-  //   const imgFluid = useHeroImage();
+
+export function BlogSection({ blogs }) {
   return (
     <>
       <div className={styles.blogs}>
@@ -59,4 +34,12 @@ export function BlogSection({}) {
   );
 }
 
-BlogSection.propTypes = {};
+BlogSection.propTypes = {
+  blogs: arrayOf(
+    shape({
+      image: objectOf(shape),
+      title: string,
+      excerpt: string
+    })
+  ).isRequired
+};

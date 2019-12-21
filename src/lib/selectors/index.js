@@ -1,0 +1,1 @@
+export { getBlogListData } from './blog';
