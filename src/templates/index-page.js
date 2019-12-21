@@ -4,7 +4,8 @@ import {
   WithLayout,
   HeroSection,
   IntroSection,
-  LogosSection
+  LogosSection,
+  BlogSection
 } from '../components';
 
 export function IndexPageTemplate({}) {
@@ -13,6 +14,7 @@ export function IndexPageTemplate({}) {
       <HeroSection />
       <IntroSection />
       <LogosSection />
+      <BlogSection />
     </>
   );
 }

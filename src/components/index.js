@@ -4,3 +4,4 @@ export { NavBar } from './NavBar';
 export { HeroSection } from './HeroSection';
 export { IntroSection } from './IntroSection';
 export { LogosSection } from './LogosSection';
+export { BlogSection } from './BlogSection';
