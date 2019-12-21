@@ -7,12 +7,27 @@
   justify-content: center;
   max-width: 1212px;
   margin: 150px auto 50px;
+  border-radius: 4px;
 }
 
 .blog {
   display: flex;
   flex-direction: column;
   width: 100%;
+  border-radius: 4px;
+  transition: ease-in box-shadow 0.3s;
+  box-shadow: none;
+}
+
+.blog:hover {
+  box-shadow: 0px 2px 16px #394e5d36;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 11px;
 }
 
 .blog-img {
@@ -37,6 +52,7 @@
   color: #182333;
   opacity: 1;
   margin-top: 0;
+  word-break: break-word;
 }
 
 .btn-wrapper {

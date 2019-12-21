@@ -37,8 +37,10 @@ function Blog({ image, title, excerpt }) {
       <div className={styles.blogImg}>
         <img src={image}></img>
       </div>
-      <h3 className={styles.blogTitle}>{title}</h3>
-      <p className={styles.blogExcerpt}>{excerpt}</p>
+      <div className={styles.blogContent}>
+        <h3 className={styles.blogTitle}>{title}</h3>
+        <p className={styles.blogExcerpt}>{excerpt}</p>
+      </div>
     </div>
   );
 }
