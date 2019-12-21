@@ -45,3 +45,5 @@ export function NavBar() {
     </nav>
   );
 }
+
+NavBar.propTypes = {};
