@@ -21,7 +21,6 @@ export function useIntroImage() {
       }
     `
   );
-  console.log(data);
   return get(
     data,
     'markdownRemark.frontmatter.intro.image.childImageSharp.fixed',

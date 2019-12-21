@@ -1,33 +1,28 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import RMarkDown from 'react-markdown';
+import { objectOf, shape, string } from 'prop-types';
 
 import styles from './IntroSection.module.css';
-import { useIntroImage } from '../../lib/hooks';
 
-export function IntroSection({}) {
-  const imgFixed = useIntroImage();
-  console.log(imgFixed);
+export function IntroSection({ img, description, heading }) {
   return (
     <div className={styles.intro}>
-      <h1 className={styles.heading}>Lorem ipsum something</h1>
+      <h1 className={styles.heading}>{heading}</h1>
       <div className={styles.description}>
         <div className={styles.img}>
-          <Img fixed={imgFixed} />
+          <Img fixed={img} />
         </div>
         <div className={styles.descriptionTexts}>
-          <h3>New Product, new Story</h3>
-          <p>
-            Vivamus vestibulum elit efficitur, elementum sapien a, aliquet
-            ipsum. Fusce placerat dolor id cursus finibus. Aliquam tempus
-            facilisis ipsum sit amet molestie. Proin lobortis eros a turpis
-            tempor, sed ornare augue aliquam. Donec imperdiet nulla ut placerat
-            molestie. In hendrerit blandit ante facilisis ultrices. Mauris
-            vulputate metus sit amet ex dignissim, sed hendrerit nunc rhoncus.
-          </p>
+          <RMarkDown source={description}></RMarkDown>
         </div>
       </div>
     </div>
   );
 }
 
-IntroSection.propTypes = {};
+IntroSection.propTypes = {
+  img: objectOf(shape).isRequired,
+  description: string.isRequired,
+  heading: string.isRequired
+};
