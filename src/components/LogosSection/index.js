@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
 
 import styles from './logosSection.module.css';
 import { useLogos } from '../../lib/hooks';
@@ -12,7 +11,7 @@ export function LogosSection({}) {
         {logos.map(({ image, link }) => {
           return (
             <a href={link} className={styles.logo}>
-              <img className={styles.img} src={image} />
+              <img className={styles.img} src={image.publicURL} alt='' />
             </a>
           );
         })}

@@ -36,7 +36,7 @@ export function NavBar() {
         ))}
         <img className={styles.img} style={{ order: 2 }} src={Logo} />
         <button className={styles.menuBtn} onClick={toggleNav}>
-          <img src={menuIcon} />
+          <img src={menuIcon} alt='' />
         </button>
       </ul>
       <NavPortal>

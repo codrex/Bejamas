@@ -8,7 +8,9 @@ export function useLogos() {
         markdownRemark {
           frontmatter {
             logos {
-              image
+              image {
+                publicURL
+              }
               link
             }
           }

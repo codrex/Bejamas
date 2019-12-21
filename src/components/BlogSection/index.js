@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
 
 import styles from './blogSection.module.css';
 import { Button } from '../Button';
