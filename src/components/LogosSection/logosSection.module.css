@@ -15,7 +15,7 @@
 }
 
 .logosWrapper {
-  max-width: 800px;
+  max-width: 1024px;
   height: 100%;
   margin: 0 auto;
   overflow: auto;
@@ -23,7 +23,6 @@
 }
 
 .logo {
-  width: 143px;
   height: 100%;
   display: flex;
   z-index: 1;
