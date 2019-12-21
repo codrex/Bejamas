@@ -7,11 +7,15 @@ import {
   LogosSection,
   BlogSection
 } from '../components';
+import { useHeroImage, useHeroData } from '../lib/hooks';
 
 export function IndexPageTemplate({}) {
+  const heroImage = useHeroImage();
+  const heroData = useHeroData();
   return (
     <>
-      <HeroSection />
+      const heroImage = useHeroImage()
+      <HeroSection img={heroImage} {...heroData} />
       <IntroSection />
       <LogosSection />
       <BlogSection />

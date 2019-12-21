@@ -1,24 +1,25 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import { string, objectOf, shape } from 'prop-types';
 
 import styles from './heroSection.module.css';
-import { useHeroImage } from '../../lib/hooks';
 
-export function HeroSection({}) {
-  const imgFluid = useHeroImage();
+export function HeroSection({ img, heading, subheading }) {
   return (
     <div className={styles.hero}>
       <div className={styles.headings}>
-        <h1>Start new… Today!</h1>
-        <p>
-          Vivamus vestibulum elit efficitur, elementum sapien a, aliquet ipsum
-        </p>
+        <h1>{heading}</h1>
+        <p>{subheading}</p>
       </div>
       <div className={styles.img}>
-        <Img fixed={imgFluid} />
+        <Img fixed={img} />
       </div>
     </div>
   );
 }
 
-HeroSection.propTypes = {};
+HeroSection.propTypes = {
+  img: objectOf(shape).isRequired,
+  heading: string.isRequired,
+  subheading: string.isRequired
+};
