@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import { useSiteMetadata } from '../lib/hooks';
 import { NavBar } from './NavBar';
+import { Footer } from './Footer';
 
 export function Layout(props) {
   const {
@@ -36,6 +37,7 @@ export function Layout(props) {
       </Helmet>
       <NavBar />
       <main className='main'>{props.children}</main>
+      <Footer />
       <script
         dangerouslySetInnerHTML={{
           __html: `

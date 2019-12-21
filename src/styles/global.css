@@ -9,9 +9,17 @@ body,
   height: 100%;
 }
 
+#gatsby-focus-wrapper {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+
 .main {
   padding: 0 75px;
+  flex: 1;
 }
+
 @media only screen and (max-width: 600px) {
   .main {
     padding: 0 30px;
