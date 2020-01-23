@@ -1,13 +1,14 @@
 import React from 'react';
 import { arrayOf, shape, string, objectOf } from 'prop-types';
 import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 
 import styles from './blogSection.module.css';
 import { Button } from '../Button';
 
-function Blog({ image, title, excerpt }) {
+function Blog({ image, title, excerpt, slug }) {
   return (
-    <div className={styles.blog}>
+    <Link to={slug} className={styles.blog}>
       <div className={styles.blogImg}>
         <Img fluid={image} />
       </div>
@@ -15,7 +16,7 @@ function Blog({ image, title, excerpt }) {
         <h3 className={styles.blogTitle}>{title}</h3>
         <p className={styles.blogExcerpt}>{excerpt}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 
