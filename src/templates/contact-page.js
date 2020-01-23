@@ -12,4 +12,4 @@ export function ContactPageTemplate({}) {
 
 ContactPageTemplate.propTypes = {};
 
-export const ContactPage = WithLayout(ContactPageTemplate);
+export default WithLayout(ContactPageTemplate);

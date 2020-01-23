@@ -2,7 +2,8 @@ import React from 'react';
 
 import { WithLayout } from '../components';
 
-export function BlogPostTemplate({}) {
+function BlogPostTemplate({ data }) {
+  console.log(data);
   return (
     <>
       <h1>Blog Post Page</h1>
@@ -12,4 +13,4 @@ export function BlogPostTemplate({}) {
 
 BlogPostTemplate.propTypes = {};
 
-export const BlogPost = WithLayout(BlogPostTemplate);
+export default WithLayout(BlogPostTemplate);

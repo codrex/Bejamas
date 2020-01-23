@@ -1,7 +1,36 @@
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const path = require('path');
 
-exports.createPages = () => {};
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const result = await graphql(`
+    query {
+      allMarkdownRemark {
+        nodes {
+          fields {
+            slug
+          }
+          frontmatter {
+            templateKey
+          }
+        }
+      }
+    }
+  `);
+
+  result.data.allMarkdownRemark.nodes.forEach(node => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(
+        `./src/templates/${node.frontmatter.templateKey}.js`
+      ),
+      context: {
+        slug: node.fields.slug
+      }
+    });
+  });
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
