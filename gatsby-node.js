@@ -34,11 +34,11 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   result.data.allMarkdownRemark.nodes.forEach(node => {
+    const { templateKey } = node.frontmatter;
+    if (templateKey === 'index-page') return;
     createPage({
       path: node.fields.slug,
-      component: path.resolve(
-        `./src/templates/${node.frontmatter.templateKey}.js`
-      ),
+      component: path.resolve(`./src/templates/${templateKey}.js`),
       context: {
         slug: node.fields.slug,
         data: node
