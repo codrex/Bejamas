@@ -1,1 +1,1 @@
-export { getBlogListData } from './blog';
+export * from './blog';

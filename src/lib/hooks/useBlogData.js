@@ -11,6 +11,9 @@ export function useBlogData(limit = 4) {
           limit: 4
         ) {
           nodes {
+            fields {
+              slug
+            }
             frontmatter {
               title
               templateKey

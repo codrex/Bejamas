@@ -12,4 +12,4 @@ function ProductsPageTemplate({}) {
 
 ProductsPageTemplate.propTypes = {};
 
-export const ProductsPage = WithLayout(ProductsPageTemplate);
+export default WithLayout(ProductsPageTemplate);
