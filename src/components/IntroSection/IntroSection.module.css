@@ -10,9 +10,6 @@
   min-height: fit-content;
   text-align: center;
   font-size: 32px;
-  font-weight: 600;
-  letter-spacing: 0;
-  color: var(--text-color);
   margin-bottom: 100px;
 }
 

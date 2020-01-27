@@ -1,0 +1,9 @@
+.featured-img {
+  height: 350px;
+  width: 100%;
+}
+
+.featured-img > div {
+  max-width: 900px;
+  margin: 0 auto;
+}

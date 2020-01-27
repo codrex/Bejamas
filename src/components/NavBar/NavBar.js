@@ -11,7 +11,7 @@ import { NavPortal } from './NavPortal';
 const links = [
   { to: '/home', text: 'home', order: 0 },
   { to: '/products', text: 'products', order: 1 },
-  { to: '/blog', text: 'blog', order: 3 },
+  { to: '/about', text: 'about', order: 3 },
   { to: '/contact', text: 'contact', order: 4 }
 ];
 

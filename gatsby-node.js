@@ -13,7 +13,21 @@ exports.createPages = async ({ graphql, actions }) => {
           }
           frontmatter {
             templateKey
+            featuredimage {
+              childImageSharp {
+                fluid {
+                  base64
+                  srcSet
+                  srcSetWebp
+                  src
+                }
+              }
+            }
+            date
+            title
           }
+          html
+          timeToRead
         }
       }
     }
@@ -26,7 +40,8 @@ exports.createPages = async ({ graphql, actions }) => {
         `./src/templates/${node.frontmatter.templateKey}.js`
       ),
       context: {
-        slug: node.fields.slug
+        slug: node.fields.slug,
+        data: node
       }
     });
   });
